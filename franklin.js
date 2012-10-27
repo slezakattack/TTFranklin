@@ -6,6 +6,7 @@ global.bot;
 global.config;
 
 initializeFranklin();
+registerBotEvents();
 
 console.log("Welcome to Franklin the big sleaze bot!");
 
@@ -25,6 +26,16 @@ function initializeFranklin() {
 	} catch(e) {
 		console.log(e);
 	}	
+}
+
+function registerBotEvents() {
+	bot.on('newsong', function(data) {
+	
+	});
+	
+	bot.on('endsong', function(data) {
+	
+	});
 }
 
 function loadConfigFile() {
