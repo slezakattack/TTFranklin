@@ -5,6 +5,9 @@ global.Bot;
 global.bot;
 global.config;
 
+var summary = require('./modules/print_summary');
+var votes = require('./modules/update_votes');
+
 initializeFranklin();
 registerBotEvents();
 
@@ -30,12 +33,16 @@ function initializeFranklin() {
 
 function registerBotEvents() {
 	bot.on('newsong', function(data) {
-	
 	});
 	
 	bot.on('endsong', function(data) {
-	
-	});
+		var speech = summary.print_summary(data, config.summary);
+		if (speech !== '') {
+			bot.speak(speech);
+		} else {
+			bot.speak(config.lost_vote);
+		}
+	});	
 }
 
 function loadConfigFile() {

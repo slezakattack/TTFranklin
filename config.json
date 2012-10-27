@@ -7,5 +7,19 @@
 	},
 	"welcome" : {
 	
+	},
+	"new_song" : [
+		"Finally! A new song! OK [user], let's see what you got!"
+	],
+	"lost_vote" : "Ooops! I lost the vote count!",
+	"summary" : {
+		"suck" : [
+			"Wow! That was horrible!",
+			"Hahaha! That was lame as aids!"
+		],
+		"awesome" : [
+			"That wasn't bad. But don't let it get to yo head!",
+			"nom nom nom"
+		]
 	}
 }
