@@ -18,14 +18,25 @@ function initializeFranklin() {
 	}
 	
 	var args = process.argv;
-	config = loadConfigFile();	
-	bot = new Bot(config.bot_properties.auth, config.bot_properties.user_id, config.bot_properties.room_id);
-/*	bot.on('speak', function(data) {
+	config = loadConfigFile();
+
+	try {
+		bot = new Bot(config.bot_properties.auth, config.bot_properties.user_id, config.bot_properties.room_id);
+	} catch(e) {
+		console.log(e);
+	}
+	bot.on('speak', function(data) {
 		var name = data.name;
 		var text = data.text;
 		
-	});*/
-	bot.speak("Hey michael and big phil!");
+		if (name === config.bot_properties.name) {
+			return;
+		}
+		
+		console.log(name + ": " + text);
+		bot.speak('Hey guys!');
+	});
+	
 }
 
 function loadConfigFile() {
