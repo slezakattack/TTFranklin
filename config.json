@@ -1,9 +1,7 @@
 {
-	"config" : {
-		"bot_properties" : {
-			"auth" : "xztiZKhyLolXVJIBNqeFhGdw",
-			"user_id": "508c1733eb35c177020002ea",
-			"room_id": "4e72c9a914169c323b0919af"
-		}
+	"bot_properties" : {
+		"auth" : "auth+live+xztiZKhyLolXVJIBNqeFhGdw",
+		"user_id": "508c1733eb35c177020002ea",
+		"room_id": "4e72c9a914169c323b0919af"
 	}
 }
