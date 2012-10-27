@@ -24,19 +24,7 @@ function initializeFranklin() {
 		bot = new Bot(config.bot_properties.auth, config.bot_properties.user_id, config.bot_properties.room_id);
 	} catch(e) {
 		console.log(e);
-	}
-	bot.on('speak', function(data) {
-		var name = data.name;
-		var text = data.text;
-		
-		if (name === config.bot_properties.name) {
-			return;
-		}
-		
-		console.log(name + ": " + text);
-		bot.speak('Hey guys!');
-	});
-	
+	}	
 }
 
 function loadConfigFile() {
