@@ -8,6 +8,8 @@ global.config;
 initializeFranklin();
 registerBotEvents();
 
+global.dispatch = require("./modules/dispatch");
+
 console.log("Welcome to Franklin the big sleaze bot!");
 
 function initializeFranklin() {
@@ -35,6 +37,10 @@ function registerBotEvents() {
 	
 	bot.on('endsong', function(data) {
 	
+	});
+
+	bot.on('speak', function(data) {
+		dispatch.process_cmd(data);
 	});
 }
 
