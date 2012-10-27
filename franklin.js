@@ -1,0 +1,1 @@
+var Bot = module.exports = require('./bot').Bot;
