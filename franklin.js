@@ -4,6 +4,7 @@ global.url = require('url');
 global.Bot;
 global.bot;
 global.config;
+global.dispatch = require('./modules/dispatch');
 
 var summary = require('./modules/print_summary');
 var votes = require('./modules/update_votes');
@@ -43,6 +44,10 @@ function registerBotEvents() {
 			bot.speak(config.lost_vote);
 		}
 	});	
+
+	bot.on('speak', function(data) {
+		dispatch.handler(data);
+	});
 }
 
 function loadConfigFile() {
