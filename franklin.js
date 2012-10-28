@@ -7,7 +7,6 @@ global.config;
 global.dispatch = require('./modules/dispatch');
 
 var summary = require('./modules/print_summary');
-var votes = require('./modules/update_votes');
 
 initializeFranklin();
 registerBotEvents();
@@ -40,8 +39,6 @@ function registerBotEvents() {
 		var speech = summary.print_summary(data, config.summary);
 		if (speech !== '') {
 			bot.speak(speech);
-		} else {
-			bot.speak(config.lost_vote);
 		}
 	});	
 
