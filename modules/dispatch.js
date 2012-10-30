@@ -14,7 +14,11 @@ exports.process_cmd = function(data) {
         admin.handler(name,text);
    			break;
       //list of regular commands
-
+	  case '/amal':
+		var cmds = require('./commands');
+		cmds.handler(name, text);
+		break;
+		
       //list of super user commands
       case '/make_admin':
       case '/remove_admin':

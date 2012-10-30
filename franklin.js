@@ -21,7 +21,6 @@ function initializeFranklin() {
 		console.log('Check to see that you have the ttapi package installed for node.js.');
 	}
 	
-	var args = process.argv;
 	config = loadConfigFile();
 
 	try {
@@ -43,7 +42,7 @@ function registerBotEvents() {
 	});	
 
 	bot.on('speak', function(data) {
-		dispatch.handler(data);
+		dispatch.process_cmd(data);
 	});
 }
 

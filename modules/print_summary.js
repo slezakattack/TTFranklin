@@ -15,12 +15,10 @@ exports.print_summary = function (data, config){
 function print_shit(upvotes, downvotes, config) {
 	var msg;
 	if (upvotes > downvotes) {
-		var index = Math.floor(Math.random() * config.awesome.length)
-		console.log(index);
+		var index = Math.floor(Math.random() * config.awesome.length);
 		msg = config.awesome[index];
 	} else {
-		var index = Math.floor(Math.random() * config.suck.length);
-		console.log(index);
+		var index = Math.floor(Math.random() * config.suck.length);		
 		msg = config.suck[index];
 	}
 	

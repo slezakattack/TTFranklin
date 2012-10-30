@@ -24,5 +24,14 @@
 		]
 	},
 	"mock" : [],
-	"summary_visible" : "true"
+	"summary_visible" : "true",
+	"amalism_request" : {
+		"host" : "api.tumblr.com",
+		"path" : "/v2/blog/amalisms.tumblr.com/posts/quote?api_key=PyezS3Q4Smivb24d9SzZGYSuhMNPQUhMsVetMC9ksuGPkK1BTt",
+		"port" : "80",
+		"method" : "GET",
+		"headers" : {
+			"Content-type" : "application/json; charset=utf-8"
+		}
+	}
 }
